@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.button {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -.087px;
+  font-family: Inter,sans-serif;
+  flex: 0 1 auto;
+  border-radius: 24px;
+  font-weight: 500;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit;
+  border: 1px solid rgba(0,0,0,.3);
+  background-color: transparent;
+  padding: 4px 16px;
+  margin: 0 6px;
+  height: 100%;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.button:hover {
+  border: 2px solid #18a0fb;
+  padding: 3px 15px;
+}
+
+.button--active {
+  color: #fff;
+  background-color: #18a0fb;
+  border: 1px solid transparent;
+}
+
