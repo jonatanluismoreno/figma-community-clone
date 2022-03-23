@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.input--container {
+  flex: 1 1 auto;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -.087px;
+  cursor: auto;
+  border: none;
+  font-family: Inter,sans-serif;
+  opacity: 0.5;
+}
+
+.input--container:focus-visible {
+  outline: none;;
+
+}
