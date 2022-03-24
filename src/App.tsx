@@ -1,31 +1,47 @@
-import { useState, useRef } from 'react'
-import './App.css'
-import Header from './components/molecules/Header'
-import Navbar from './components/molecules/Navbar'
-import Icon from './components/atoms/Icon'
-import Card from './components/molecules/Card'
-import Plugin from './components/molecules/Plugin'
+import { useState, useRef } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { routes } from "./routes";
+import "./App.css";
+import Header from "./components/molecules/Header";
+import Navbar from "./components/molecules/Navbar";
+import Icon from "./components/atoms/Icon";
+import Card from "./components/molecules/Card";
+import Plugin from "./components/molecules/Plugin";
 
-import ExtendedPlugin from './components/molecules/ExtendedPlugin'
+import ExtendedPlugin from "./components/molecules/ExtendedPlugin";
 
-import loading from '../src/assets/loading.svg'
+import loading from "../src/assets/loading.svg";
 
-import arrowbutton from '../src/assets/arrow-button.svg'
+import arrowbutton from "../src/assets/arrow-button.svg";
 
-import { Loading } from './assets/Loading'
+import { Loading } from "./assets/Loading";
 
+import extended1 from "./assets/extended/extended1.jpg";
 
-import extended1 from './assets/extended/extended1.jpg'
-
-import { PLUGINS, EXTENDEDPLUGINS } from './components/organisms/Plugins/constants'
+import {
+  PLUGINS,
+  EXTENDEDPLUGINS,
+} from "./components/organisms/Plugins/constants";
 
 interface Props {
-  name: 'profile1' | 'profile2' | 'profile3' | 'profile4' | 'profilefigma' | 'main1' | 'main2' | 'plugin1' | 'plugin2' | 'plugin3' | 'plugin4';
+  name:
+    | "profile1"
+    | "profile2"
+    | "profile3"
+    | "profile4"
+    | "profilefigma"
+    | "main1"
+    | "main2"
+    | "plugin1"
+    | "plugin2"
+    | "plugin3"
+    | "plugin4";
   title: string;
   description: string;
   id: number;
 }
-{/* <Header title="Explore files and plugins made just for Figma" subtitle='Explore, install, use, and remix thousands of files and plugins' />
+{
+  /* <Header title="Explore files and plugins made just for Figma" subtitle='Explore, install, use, and remix thousands of files and plugins' />
       <div className='banner-container'>
         <div className='banner'>
           <div className='info-banner'>
@@ -105,17 +121,10 @@ interface Props {
         </div>
       </div>
               
-             */}
-function App() {
-  const [showPlugins, setShowPlugins] = useState(4)
+             */
+}
 
-  const pluginsRef = useRef(null)
-
-  const [filterActive, setFilterActive] = useState("All")
-
-  return (
-    <div className="App">
-      <Navbar/>
+/*  <Navbar/>
       <Header title="Powerful plugins made just for Figma" subtitle='Add new functionality and power up your workflow with these small but mighty apps' activeSection='Plugins'/>
       <section className='plugins-section'>
         <div className='plugins-bar'>
@@ -177,9 +186,15 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  )
+      </section>*/
+function App() {
+  const [showPlugins, setShowPlugins] = useState(4);
+
+  const pluginsRef = useRef(null);
+
+  const [filterActive, setFilterActive] = useState("All");
+
+  return <div className="App"></div>;
 }
 
-export default App
+export default App;

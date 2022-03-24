@@ -1,0 +1,144 @@
+.cards-container {
+  flex: 1 1 auto;
+  max-width: 100%;
+  padding: 0 40px;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 32px 32px;
+  width: 100%;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-items: center;
+}
+
+.plugins {
+  padding: 0 17px;
+}
+
+.plugins-tile {
+  display: grid;
+  grid-gap: 32px 32px;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  overflow-y: hidden;
+  transition: max-height 0.3s ease-in-out;
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  padding: 0 16px;
+}
+
+.plugins-section::after {
+  content: "";
+  display: block;
+  width: calc(100% - 64px);
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 32px 32px 0;
+}
+
+@media (max-width: 905px) {
+  .plugins-tile {
+    display: flex;
+    overflow-x: scroll;
+    width: calc(100% + 64px);
+    margin-left: -32px;
+    grid-template-columns: none;
+    grid-gap: unset;
+    padding: 0;
+  }
+}
+
+.none {
+  display: none;
+}
+
+.banner-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 32px 32px 0;
+}
+
+.banner {
+  background-image: url(/src/assets/curated_page_card.svg);
+  background-repeat: no-repeat;
+  background-color: #9747ff;
+  height: 168px;
+  width: 100%;
+  border-radius: 16px;
+  display: flex;
+  padding: 0 64px;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.info-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.banner-title {
+  color: #fff;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.banner-button {
+  transition: all ease 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #9747ff;
+  font-weight: 600;
+  height: 40px;
+  border-radius: 8px;
+  max-width: 125px;
+  cursor: default;
+  font-size: 14px;
+  line-height: 24px;
+  border: 0;
+}
+
+.plugins-bar {
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plugins-bar-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.plugins-bar-more {
+  font-weight: 500;
+  color: #18a0fb;
+  cursor: default;
+}
+
+.plugins-bar-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.plugins-bar-subtitle {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #0000008a;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}

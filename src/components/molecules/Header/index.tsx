@@ -1,6 +1,8 @@
 import React from "react"
 import './styles.css'
 
+import { Link, NavLink } from "react-router-dom"
+
 import Button from "../../atoms/Button"
 import Input from "../../atoms/Input"
 
@@ -19,8 +21,10 @@ const Header: React.FC<Props> = ({ title, subtitle, activeSection }) => {
     <div className="header--container">
       <div className="header--buttons">
         {
-          BUTTONS.map(({ name, id }) => (
-            <Button key={id} content={name} active={activeSection === name ? true : false}/>
+          BUTTONS.map(({ name, id, route }) => (
+            <NavLink to={`/${route}`}>
+              <Button key={id} content={name} active={activeSection === name ? true : false}/>
+            </NavLink>
           ))
         }
       </div>
