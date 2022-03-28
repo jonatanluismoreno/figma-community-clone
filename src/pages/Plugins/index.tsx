@@ -43,27 +43,29 @@ export const PluginsPage = () => {
             </div>
           </div>
         </div>
-        <div className="plugin-filter">
-          <h3
-            className={filterActive === "All" ? "black" : "filter-text"}
-            onClick={() => setFilterActive("All")}
-          >
-            All
-          </h3>
-          <h3
-            className={
-              filterActive === "Figma design" ? "black" : "filter-text"
-            }
-            onClick={() => setFilterActive("Figma design")}
-          >
-            Figma design
-          </h3>
-          <h3
-            className={filterActive === "FigJam" ? "black" : "filter-text"}
-            onClick={() => setFilterActive("FigJam")}
-          >
-            FigJam
-          </h3>
+        <div className="filters">
+          <div className="plugin-filter">
+            <h3
+              className={filterActive === "All" ? "black" : "filter-text"}
+              onClick={() => setFilterActive("All")}
+            >
+              All
+            </h3>
+            <h3
+              className={
+                filterActive === "Figma design" ? "black" : "filter-text"
+              }
+              onClick={() => setFilterActive("Figma design")}
+            >
+              Figma design
+            </h3>
+            <h3
+              className={filterActive === "FigJam" ? "black" : "filter-text"}
+              onClick={() => setFilterActive("FigJam")}
+            >
+              FigJam
+            </h3>
+          </div>
         </div>
       </section>
       <section className="plugins-content">

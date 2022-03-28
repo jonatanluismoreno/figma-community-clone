@@ -34,7 +34,7 @@ export const ExplorePage = () => {
             </Link>
           </div>
         </div>
-        <section className="plugins-section">
+        <section className="pluginsSection">
           <Info
             title="Plugins for Documentation"
             subtitle="PLUGINS FOR DOCUMENTATION, ANNOTATION, AND COMMUNICATION OF YOUR
@@ -57,7 +57,7 @@ export const ExplorePage = () => {
           </div>
         </section>
 
-        <section className="plugins-section">
+        <section className="pluginsSection">
           <Info
             title="Top plugins"
             subtitle="THIS WEEK"

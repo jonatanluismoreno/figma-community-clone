@@ -1,18 +1,17 @@
 .plugins-page {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .plugins {
   padding: 0 17px;
 }
 
-.plugins-section::after {
-  content: "";
-  display: block;
-  width: calc(100% - 64px);
-  height: 1px;
-  background: rgba(0, 0, 0, 0.1);
-  margin: 32px 32px 0;
+.plugins-section {
+  width: 90%;
+  margin: 0 90px;
 }
 
 .plugins-tile {
@@ -43,7 +42,6 @@
   flex-direction: row;
   display: flex;
   align-items: flex-start;
-  height: 64px;
   padding-left: 35px;
 }
 
@@ -81,7 +79,7 @@
 
 .plugins-content {
   align-self: center;
-  width: inherit;
+  width: 100%;
   box-sizing: border-box;
   padding-bottom: 32px;
   min-height: 100vh;
@@ -95,6 +93,7 @@
 }
 
 .content-container {
+  margin: 0 90px;
   flex: 1 1 auto;
   max-width: 100%;
 }

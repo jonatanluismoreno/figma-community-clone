@@ -44,7 +44,7 @@
   padding: 0 16px;
 }
 
-.plugins-section::after {
+.pluginsSection::after {
   content: "";
   display: block;
   width: calc(100% - 64px);
