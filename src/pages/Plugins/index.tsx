@@ -4,6 +4,7 @@ import Plugin from "../../components/molecules/Plugin";
 import Navbar from "../../components/molecules/Navbar";
 import Header from "../../components/molecules/Header";
 import ExtendedPlugin from "../../components/molecules/ExtendedPlugin";
+import Info from "../../components/molecules/Info";
 
 import {
   PLUGINS,
@@ -15,7 +16,7 @@ export const PluginsPage = () => {
   const pluginsRef = useRef(null);
   const [filterActive, setFilterActive] = useState("All");
   return (
-    <>
+    <div className="plugins-page">
       <Navbar />
       <Header
         title="Powerful plugins made just for Figma"
@@ -23,22 +24,16 @@ export const PluginsPage = () => {
         activeSection="Plugins"
       />
       <section className="plugins-section">
-        <div className="plugins-bar">
-          <div className="plugins-bar-info">
-            <h4 className="plugins-bar-subtitle">
-              PLUGINS FOR DOCUMENTATION, ANNOTATION, AND COMMUNICATION OF YOUR
-              DESIGNS
-            </h4>
-            <h2 className="plugins-bar-title">Plugins for Documentation</h2>
-          </div>
-          <div className="plugins-bar-more">
-            <h4 className="plugins-showmore">Show more</h4>
-          </div>
-        </div>
+        <Info
+          title="Plugins for Documentation"
+          subtitle="PLUGINS FOR DOCUMENTATION, ANNOTATION, AND COMMUNICATION OF YOUR
+              DESIGNS"
+          mode="showMore"
+        />
         <div className="plugins-container">
           <div className="plugins">
             <div className="plugins-tile" ref={pluginsRef}>
-              {PLUGINS.slice(0, 2).map((plugin) => (
+              {PLUGINS.slice(0, 4).map((plugin) => (
                 <Plugin
                   name={plugin.name}
                   title={plugin.title}
@@ -108,7 +103,7 @@ export const PluginsPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
