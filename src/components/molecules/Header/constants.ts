@@ -1,62 +1,74 @@
 export const BUTTONS = [
   {
-    name: 'Explore',
+    name: "Explore",
     active: true,
-    route: 'explore',
-    id: 1
+    route: "explore",
+    id: 1,
   },
   {
-    name: 'Plugins',
+    name: "Plugins",
     active: false,
-    route: 'plugins',
-    id: 2
+    route: "plugins",
+    id: 2,
   },
   {
-    name: 'Design systems',
+    name: "Widgets",
     active: false,
-    route: 'designsystems',
-    id: 3
+    route: "widgets",
+    id: 3,
   },
   {
-    name: 'Wireframes',
+    name: "FigJam",
     active: false,
-    route: 'wireframe',
-    id: 4
+    route: "figjam",
+    id: 4,
   },
   {
-    name: 'Illustrations',
+    name: "Design systems",
     active: false,
-    route: 'illustrations',
-    id: 5
+    route: "designsystems",
+    id: 5,
   },
   {
-    name: 'Icons',
+    name: "Wireframes",
     active: false,
-    route: 'icons',
-    id: 6
+    route: "wireframe",
+    id: 6,
   },
   {
-    name: 'Typography',
+    name: "Illustrations",
     active: false,
-    route: 'typography',
-    id: 7
+    route: "illustrations",
+    id: 7,
   },
   {
-    name: 'Movile design',
+    name: "Icons",
     active: false,
-    route: 'moviledesign',
-    id: 8
+    route: "icons",
+    id: 8,
   },
   {
-    name: 'Web design',
+    name: "Typography",
     active: false,
-    route: 'webdesign',
-    id: 9
+    route: "typography",
+    id: 9,
   },
   {
-    name: 'UI kits',
+    name: "Movile design",
     active: false,
-    route: 'uikits',
-    id: 10
+    route: "moviledesign",
+    id: 10,
   },
-]
+  {
+    name: "Web design",
+    active: false,
+    route: "webdesign",
+    id: 11,
+  },
+  {
+    name: "UI kits",
+    active: false,
+    route: "uikits",
+    id: 12,
+  },
+];
