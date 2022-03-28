@@ -1,3 +1,16 @@
+.explore-page {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+}
+
 .cards-container {
   flex: 1 1 auto;
   max-width: 100%;
@@ -88,6 +101,11 @@
 .banner-title {
   color: #fff;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.button-link {
+  text-decoration: none;
+  cursor: default;
 }
 
 .banner-button {
