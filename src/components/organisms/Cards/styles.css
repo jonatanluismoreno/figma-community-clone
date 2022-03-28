@@ -1,0 +1,15 @@
+.cards-container {
+  flex: 1 1 auto;
+  max-width: 100%;
+  padding: 0 40px;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 32px 32px;
+  width: 100%;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-items: center;
+}
