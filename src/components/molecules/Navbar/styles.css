@@ -32,7 +32,7 @@
 
 .community-account:hover > .arrow-svg {
   transform: translate(0, 3px);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .community-svg {
@@ -46,7 +46,7 @@
 }
 
 .text-community:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .search-community {
@@ -86,14 +86,14 @@
 
 .button-header {
   line-height: 24px;
-  letter-spacing: -.087px;
-  font-family: Inter,sans-serif;
+  letter-spacing: -0.087px;
+  font-family: Inter, sans-serif;
   flex: 0 1 auto;
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border: 1px solid rgba(0,0,0,.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   margin: 0 6px;
   height: 100%;
   cursor: default;
@@ -121,7 +121,7 @@
 
 .profile-container:hover > .arrow-svg {
   transform: translate(0, 3px);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .user-image {
@@ -130,4 +130,83 @@
 }
 
 .arrow-svg {
+}
+
+.navbar-signup {
+  display: flex;
+  height: 56px;
+  padding: 8px 32px;
+  background-color: #fff;
+  box-sizing: border-box;
+  justify-content: space-between;
+  letter-spacing: 0.03em;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+}
+
+.navbar-left-section-signup {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar-figma-svg {
+  width: 12%;
+}
+
+.navbar-text-community-signup {
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  height: 100%;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #000;
+}
+
+.right-section-signup {
+}
+
+.navbar-login__noauth {
+  color: #000;
+  border-color: #fff;
+  margin-right: 12px;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  width: 92px;
+  box-sizing: border-box;
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+.navbar-login__noauth:hover {
+  opacity: 0.5;
+}
+
+.button-navbar__noauth {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  width: 92px;
+  box-sizing: border-box;
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 6px;
 }
