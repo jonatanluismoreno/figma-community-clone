@@ -1,0 +1,132 @@
+.modal-component {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  background: #fff;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  height: 600px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.modal-separator {
+  margin: 0;
+  margin-top: 15px;
+  opacity: 0.5;
+}
+
+.modal-form {
+  display: inline-flex;
+  width: 330px;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.modal-input {
+  box-sizing: border-box;
+  border-width: 0;
+  border: 3px solid #000;
+  margin-bottom: 15px;
+  width: calc(100% - 6px);
+  padding-left: 12px;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  font-size: 16px;
+  height: 50px;
+  line-height: normal;
+  border-radius: 5px;
+}
+
+.modal-input:focus {
+  border-width: 0;
+  border: 0;
+  border: 3px solid #00bcd4;
+}
+
+.modal-error {
+  margin: 0;
+  text-align: left;
+  color: #f24e1e;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  font-family: Whyte, sans-serif;
+  display: inline-block;
+  height: 25px;
+}
+
+.modal-button {
+  display: inline-block;
+  border: 3px solid black;
+  background-color: #fff;
+  font-size: 14px;
+  width: 330px;
+  height: 48px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-button-black {
+  background-color: #000;
+  color: #fff;
+  height: 48px;
+}
+
+.modal-text-button {
+  letter-spacing: 0.5px;
+  padding: 0;
+  margin: 5px;
+}
+
+.modal-footer {
+  opacity: 0.5;
+}
+
+.modal-footer-haveacc {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.modal-footer-text-extra {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+h4 > a {
+  color: #1600df;
+}
