@@ -191,6 +191,8 @@
   border: 1px solid transparent;
   border-radius: 6px;
   background-color: transparent;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 .navbar-login__noauth:hover {
@@ -201,6 +203,7 @@
   background-color: #000;
   color: #fff;
   font-weight: 700;
+  font-size: 15px;
   justify-content: center;
   align-items: center;
   cursor: default;

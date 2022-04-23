@@ -10,7 +10,7 @@ import { auth } from "../firebase";
 
 export interface FunctionProps {
   login: (email: string, password: string) => Promise<UserCredential> | void;
-  signUp: (email: string, password: string) => Promise<UserCredential> | void;
+  signup: (email: string, password: string) => Promise<UserCredential> | void;
   logout: () => Promise<void> | void;
   user: User | null | undefined;
   loading: boolean | null | undefined;
@@ -18,7 +18,7 @@ export interface FunctionProps {
 
 export const authContext = createContext<FunctionProps>({
   login: () => {},
-  signUp: () => {},
+  signup: () => {},
   logout: () => {},
   user: null,
   loading: null,
@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }: Props) => {
 
   const login = (email: string, password: string) =>
     signInWithEmailAndPassword(auth, email, password);
-  const signUp = (email: string, password: string) =>
+  const signup = (email: string, password: string) =>
     createUserWithEmailAndPassword(auth, email, password);
   const logout = () => signOut(auth);
 
@@ -58,7 +58,7 @@ export const AuthProvider = ({ children }: Props) => {
   return (
     <authContext.Provider
       value={{
-        signUp,
+        signup,
         login,
         logout,
         user,

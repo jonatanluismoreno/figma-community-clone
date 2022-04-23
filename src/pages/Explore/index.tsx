@@ -5,7 +5,7 @@ import "./styles.css";
 import Header from "../../components/molecules/Header";
 import Plugin from "../../components/molecules/Plugin";
 import Navbar from "../../components/molecules/Navbar";
-import Card from "../../components/molecules/Card";
+import Modal from "../../components/molecules/Modal";
 
 import { PLUGINS } from "../../components/organisms/Plugins/constants";
 import Cards from "../../components/organisms/Cards";
@@ -21,6 +21,7 @@ export const ExplorePage = () => {
         subtitle="Explore, install, use, and remix thousands of files and plugins"
         activeSection="Explore"
       />
+      <Modal />
       <section className="main">
         <div className="banner-container">
           <div className="banner">

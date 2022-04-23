@@ -21,7 +21,7 @@ const Info: React.FC<Props> = ({ title, subtitle, mode, link }) => {
           {mode == "showMore" ? (
             <h4 className="plugins-showmore">Show more</h4>
           ) : (
-            <Link to={link}>
+            <Link to="/">
               <h4 className="plugins-showmore">Browse all plugins →</h4>
             </Link>
           )}

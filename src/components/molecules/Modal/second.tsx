@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAuth } from "../../../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const Modal: React.FC<Props> = () => {
 
   const { signup } = useAuth();
   const navigate = useNavigate();
-  const [error, setError] = useState<React.ErrorInfo>();
+  const [error, setError] = useState("");
 
   const handleChange = ({ target: { name, value } }: any) => {
     setUser({
@@ -24,9 +24,9 @@ const Modal: React.FC<Props> = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setError(undefined);
+    setError("");
     try {
       await signup(user.email, user.password);
       navigate("/");
@@ -37,14 +37,10 @@ const Modal: React.FC<Props> = () => {
     //setError("Internal error");}
   };
 
-  const close = () => {
-    navigate("/widgets");
-  };
-
   return (
     <div className="modal-component">
       <div className="modal-container">
-        <img src={cross} alt="close" className="modal-close" onClick={close} />
+        <img src={cross} alt="close" className="modal-close" />
         <div className="modal-header">
           <h1 className="modal-title">
             Create an account to <br /> join the Figma <br /> Community
@@ -52,11 +48,11 @@ const Modal: React.FC<Props> = () => {
           <button className="modal-button">
             <h3 className="modal-text-button">Continue with Google</h3>
           </button>
-          <h4 className="modal-separator">or</h4>
+          <h4>or</h4>
         </div>
         <div className="modal-body">
+          {error && <p>{error}</p>}
           <form onSubmit={handleSubmit} className="modal-form">
-            <p className="modal-error">{error ? { error } : ""} </p>
             <input
               type="text"
               name="email"
