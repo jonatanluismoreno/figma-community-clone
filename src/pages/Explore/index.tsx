@@ -13,20 +13,36 @@ import Info from "../../components/molecules/Info";
 
 export const ExplorePage = () => {
   const pluginsRef = useRef(null);
+  const [isSigninModal, setIsSigninModal] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const signUpModal = () => {
+
+  const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+
+  const signUpModal = () => {
+    setIsSigninModal(true);
+    toggleModal();
+  };
+
+  const signInModal = () => {
+    setIsSigninModal(false);
+    toggleModal();
   };
 
   return (
     <div className="explore-page">
-      <Navbar signUpModal={signUpModal} />
+      <Navbar signUpModal={signUpModal} signInModal={signInModal} />
+      <Modal
+        isDisabled={!isModalOpen}
+        onClose={toggleModal}
+        isSignin={isSigninModal}
+      />
       <Header
         title="Explore files and plugins made just for Figma"
         subtitle="Explore, install, use, and remix thousands of files and plugins"
         activeSection="Explore"
       />
-      <Modal isDisabled={!isModalOpen} onClose={signUpModal} />
       <section className="main">
         <div className="banner-container">
           <div className="banner">

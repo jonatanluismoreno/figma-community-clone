@@ -9,9 +9,14 @@ import figma from "../../../assets/figma.svg";
 interface Props {
   isAuth?: boolean;
   signUpModal?: () => void;
+  signInModal?: () => void;
 }
 
-const Navbar: React.FC<Props> = ({ isAuth = false, signUpModal }) => {
+const Navbar: React.FC<Props> = ({
+  isAuth = false,
+  signUpModal,
+  signInModal,
+}) => {
   return (
     <>
       {!isAuth ? (
@@ -21,7 +26,9 @@ const Navbar: React.FC<Props> = ({ isAuth = false, signUpModal }) => {
             <span className="navbar-text-community-signup">Community</span>
           </section>
           <section className="right-section-signup">
-            <button className="navbar-login__noauth">Log in</button>
+            <button className="navbar-login__noauth" onClick={signInModal}>
+              Log in
+            </button>
             <button className="button-navbar__noauth" onClick={signUpModal}>
               Sign up
             </button>
