@@ -5,9 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import cross from "../../../assets/cross.svg";
 import "./styles.css";
 
-interface Props {}
+interface Props {
+  isDisabled?: boolean;
+  onClose?: () => void;
+}
 
-const Modal: React.FC<Props> = () => {
+const Modal: React.FC<Props> = ({ isDisabled = true, onClose }) => {
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -37,14 +40,15 @@ const Modal: React.FC<Props> = () => {
     //setError("Internal error");}
   };
 
-  const close = () => {
-    navigate("/widgets");
-  };
-
   return (
-    <div className="modal-component">
+    <div className={`modal-component ${isDisabled ? "disabled_modal" : ""}`}>
       <div className="modal-container">
-        <img src={cross} alt="close" className="modal-close" onClick={close} />
+        <img
+          src={cross}
+          alt="close"
+          className="modal-close"
+          onClick={onClose}
+        />
         <div className="modal-header">
           <h1 className="modal-title">
             Create an account to <br /> join the Figma <br /> Community

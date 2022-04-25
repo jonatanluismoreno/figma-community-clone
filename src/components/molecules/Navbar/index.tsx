@@ -8,9 +8,10 @@ import user from "../../../assets/user.png";
 import figma from "../../../assets/figma.svg";
 interface Props {
   isAuth?: boolean;
+  signUpModal?: () => void;
 }
 
-const Navbar: React.FC<Props> = ({ isAuth = false }) => {
+const Navbar: React.FC<Props> = ({ isAuth = false, signUpModal }) => {
   return (
     <>
       {!isAuth ? (
@@ -21,7 +22,9 @@ const Navbar: React.FC<Props> = ({ isAuth = false }) => {
           </section>
           <section className="right-section-signup">
             <button className="navbar-login__noauth">Log in</button>
-            <button className="button-navbar__noauth">Sign up</button>
+            <button className="button-navbar__noauth" onClick={signUpModal}>
+              Sign up
+            </button>
           </section>
         </header>
       ) : (

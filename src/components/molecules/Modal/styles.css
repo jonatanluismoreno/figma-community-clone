@@ -10,7 +10,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.disabled_modal {
+  display: none;
+}
 .modal-container {
   background: #fff;
   align-items: center;
