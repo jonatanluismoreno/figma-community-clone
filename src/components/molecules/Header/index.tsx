@@ -21,9 +21,8 @@ const Header: React.FC<Props> = ({ title, subtitle, activeSection }) => {
     <div className="header--container">
       <div className="header--buttons">
         {BUTTONS.map(({ name, id, route }) => (
-          <NavLink to={`/${route}`}>
+          <NavLink to={`/${route}`} key={id}>
             <Button
-              key={id}
               content={name}
               active={activeSection === name ? true : false}
             />

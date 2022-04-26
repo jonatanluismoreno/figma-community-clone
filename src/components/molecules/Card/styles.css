@@ -72,20 +72,17 @@
 .svgover {
   display: none;
 }
-
-
-*/
-
 .svg-container:hover {
   display: none;
 }
+.svgHover-container:hover {
+  display: block;
+}
+
+*/
 
 .svgHover-container {
   width: 30px;
   height: 20px;
   display: none;
-}
-
-.svgHover-container:hover {
-  display: block;
 }

@@ -67,12 +67,6 @@ const Card: React.FC<Props> = ({
               <div className="svg-container">
                 <img src={duplicate} alt="" className="svg-icon" />
               </div>
-              <div className="svgHover-container">
-                <img src={duplicateHover} alt="" className="svg-hover" />
-              </div>
-              <div className="svgHover-container">
-                <img src={duplicateHover} alt="" className="svg-hover" />
-              </div>
             </div>
             <h6 className="card--info"> {isBigger(duplicates)} </h6>
           </div>

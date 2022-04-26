@@ -1,0 +1,29 @@
+.commonpage {
+}
+
+.commonpage_main {
+  margin-top: 130px;
+  display: flex;
+}
+
+.commonpage_cardscontainer {
+  width: 100%;
+}
+
+.commonpage_sidecontent {
+  width: 270px;
+}
+
+.commonpage_tags_list_item {
+  color: #000c;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 4px 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
